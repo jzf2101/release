@@ -14,6 +14,8 @@ before_install:
   - conda install --yes binstar conda-build jinja2
   - conda config --add channels distributions
   - conda config --add channels datamicroscopes
+  - export CC=gcc
+  - export CXX=c++
   - git submodule init
   - git submodule update
 env:
