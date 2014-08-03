@@ -6,6 +6,13 @@ notifications:
   slack:
     secure: "UvaKdilhLmefDk+cvmGWJI8y78Qhd4t1g/nhvENGtwcVstcnR/opnJajowVjMHlphNGaCON+6wdqeVTezMAjRNCTdMGK0nCthv0DdqcyCYFsl/1ddJJ0G6KYhBIPK5GxaYVTuvquipoUrelMfo8snevU44QdYB836JFZfHPAHf0="
 before_install:
+  - which gcc
+  - gcc -v
+  - which c++
+  - c++ -v
+  - which gcc-4.2
+  - gcc-4.2 -v
+  - sudo mv `which gcc-4.2` `which gcc-4.2`-old # HACK
   - wget http://repo.continuum.io/miniconda/Miniconda-3.5.5-MacOSX-x86_64.sh -O miniconda.sh
   - chmod +x miniconda.sh
   - ./miniconda.sh -b
